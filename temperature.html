@@ -1,51 +1,68 @@
+
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <link rel="stylesheet" type="text/css"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
-    <title>Temperature Converter</title>
+        <div class="container">
+            <div class="display">
+                <input id="screen" type="text" placeholder="0">
+            </div>
 
-</head>
+            <div class="btns">
+                <div class="row">
+                    <button id="ce" onclick="backspc()">CE</button>
+                    <button onclick="fact()">x!</button>
+                    <button class="btn">(</button>
+                    <button class="btn">)</button>
+                    <button class="btn">%</button>
+                    <button id="ac" onclick="screen.value=''">AC</button>
+                </div>
 
-<body>
-    <div class="first">
-        <h1 style="font-weight:bolder; font-size:45px;">Temperature Conversion</h1>
-    </div>
-    <div class="container">
-        <div class="card">
-            <img style="margin-left: 5px; margin-right: 90px;" height="210px" width="138px" src="https://leafecodes.com/wp-content/uploads/2017/07/b4a-temperature-converter-leafecodes.jpg"
-                alt="Thermometer">
-            <form id="tempC" onsubmit="calculateTemp(); return false ">
+                <div class="row">
+                    <button onclick="sin()">sin</button>
+                    <button onclick="pi()">π</button>
+                    <button class="btn">7</button>
+                    <button class="btn">8</button>
+                    <button class="btn">9</button>
+                    <button class="btn">+</button>
+                </div>
 
-                <label style="margin-top: 10px; font-weight: bold;" for="temp">
-                    <center>Calculator</center>
-                </label>
-                <br>
-                <input type="number" name="temp" id="temp">
+                <div class="row">
+                    <button onclick="cos()">cos</button>
+                    <button onclick="log()">log</button>
+                    <button class="btn">4</button>
+                    <button class="btn">5</button>
+                    <button class="btn">6</button>
+                    <button class="btn">×</button>
+                </div>
 
-                <select name="temp_diff" id="temp_diff">
-                    <option value="cel">Celsius °C</option>
-                    <option value="fah">Fahrenheit °F</option>
+                <div class="row">
+                    <button onclick="tan()">tan</button>
+                    <button onclick="sqrt()">√</button>
+                    <button class="btn">1</button>
+                    <button class="btn">2</button>
+                    <button class="btn">3</button>
+                    <button class="btn">-</button>
+                </div>
 
-                </select>
-                <br>
-                <input
-                    style=" height: 46px; width: 79px; border-radius: 5px;
-        box-shadow: 1px 2px 3px 4px rgba(240, 226, 226, 0.2); margin-top: 10px; font-weight: bold; margin-left: 165px; background-color: rgb(216, 133, 133);  color: azure;"
-                    type="submit" name="temp">
-                <br>
-                <span style="font-weight: bolder; font-size: larger;" id="resultContainer"></span>
-            </form>
+                <div class="row">
+                    <button onclick="e()">e</button>
+                    <button onclick="pow()">x <span style="position: relative; bottom: .4em; right: .1em;">y</span></button>
+                    <button class="btn">0</button>
+                    <button class="btn">.</button>
+                    <button id="eval" onclick="screen.value=eval(screen.value)">=</button>
+                    <button class="btn">÷</button>
+                </div>
+            </div>
         </div>
-    </div>
-
-
-
-    <script src="script.js"> </script>
-</body>
-
+        <script src="script.js"></script>
+    </body>
 </html>
